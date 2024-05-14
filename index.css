@@ -1,8 +1,50 @@
-img {
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+html, body {
+    font-family: "Nanum Gothic", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-container {
+    text-align: right;
+}
+
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+canvas {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-    border-radius: 360px;
-  }
-  
+    background-color: black;
+    z-index: -1;
+    position: fixed;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+#intro {
+    opacity: 100;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
