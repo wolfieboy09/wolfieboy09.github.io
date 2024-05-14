@@ -10,6 +10,7 @@ resizeCanvas();
 
 const particles = [];
 const numParticles = 200;
+
 for (let i = 0; i < numParticles; i++) {
   particles.push({
     x: Math.random() * canvas.width,
@@ -17,7 +18,6 @@ for (let i = 0; i < numParticles; i++) {
     radius: Math.random() * 2 + 1,
     speed: Math.random() * 2 + 1,
     opacity: Math.random(),
-    color: 'white'
   });
 }
 
@@ -27,7 +27,7 @@ function draw() {
   particles.forEach(particle => {
     particle.y -= particle.speed;
 
-    particle.opacity -= 0.005;
+    particle.opacity -= 0.0005;
 
     if (particle.y < 0 || particle.opacity <= 0) {
       particle.y = canvas.height + Math.random() * canvas.height;
