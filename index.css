@@ -7,8 +7,20 @@ html, body {
     overflow: hidden;
 }
 
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
 .nav-container {
-    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
 
 .nav-bar {
